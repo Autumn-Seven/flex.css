@@ -1,12 +1,11 @@
-  [![npm](https://img.shields.io/npm/v/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/dt/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css) [![npm](https://img.shields.io/npm/l/flex.css.svg?style=flat-square)](https://www.npmjs.com/package/flex.css)
+# Autumn-flex
 
-###
-[中文文档入口](https://github.com/lzxb/flex.css/blob/master/docs/zh-ch.md)  
-如果对状态管理感兴趣，可以看下 [Tms](https://github.com/FollowmeTech/tms)，文档更齐全
+项目来源 [https://github.com/lzxb/flex.css](https://github.com/lzxb/flex.css) 有兴趣可以移步去看一下。
+本项目主要喜欢上面项目布局的方式，但是又不习惯他定义的名称，所以改写了一下。
 
 ### download
 ```
-git clone https://github.com/lzxb/flex.css.git
+git clone https://github.com/kisstheair/Autumn-flex.git
 ```
 
 ### npm
@@ -15,27 +14,16 @@ npm install flex.css --save
 ```
 
 
-### Why do you need flex.css?
+### 为什么使用 Autumn-flex.css?
 ```
-In the process of Mobile Terminal Development, standard flex is not supported by all versions of all kinds of
-browsers, webview, and wechat which basically support  -webkit-box. So flex.css's main purpose is to ensure
-that every attribute can be supported by standard version's flex or old-version's -webkit-box.
-due to autoprefixer compilation is used by flex.css,it will roll back to old-version's -webkit-box when standard
-flex is not supported by some browsers so the effect of layout will be the same.
-Then,here comes a magic effient layout tool of mobile terminal development ...
+简洁的api，熟悉的属性值，入门毫无压力。
+在html中采用属性的方式布，将布局和css进行分离，清晰的布局结构让你更容易维护，可以在不更改css的情况下更改布局。
+特别是在React中使用data-flex属性布局，维护起来更加的方便。
 ```
 
 
-###  merits
-```
-Concise api, 
-familiar attribute values, makes it easy for you to get started in using flex.css.
-In html, the layout is bind with attributes, so it is seperated from css. In this way, it will be easier for you
-to maintain and modify your layout without modifying css.
-```
 
-
-### support
+### 兼容性
 ```
 flex layout is split into three versions: old version: display: box; , transitional version: display:flexbox; ,
 and present standard version: display:flex; .
@@ -52,7 +40,7 @@ flex.css is compatible with standard version and old version at the same time, s
 ```
 ![Alt text](https://github.com/lzxb/flex.css/raw/master/shot/caniuse.png)
 
-### use
+### 使用方法
 ```html
 <!--
 According to what you need, include css files in the dist directory into your html
@@ -76,42 +64,60 @@ import 'flex.css/dist/data-flex.css';
 ```
 ### collection of flex attributes
 ```
-dir: axis direction
+dir: 方向 flex-direction
+    left：从左到右( default )
     top：from top to bottom
     right：from right to left
     bottom：from bottom to top
-    left：from left to right( default )
+    
 ```
 ```
-main：axis align
-    right：from right to left
-    left：from left to right ( default )
-    justify：justify align
-    center：center align
+wrap: 是否换行 flex-wrap: nowrap;
+    nowrap：from top to bottom (默认不换行)
+    start：换行，从左到右排列
+    end：换行，从右到左排列  
+```
+
+
+```
+main：主轴对齐方式 justify-content
+    start：从左到右 （默认）
+    end：从右到左
+    center：居中
+    between：两边不留空间， 剩余空间间隔平分
+    around：两边留空间， 间隔空间的一半
 ```
 ```
-cross：cross axis align
-    top：from top to bottom ( default )
-    bottom：from top to bottom
-    baseline：baseline align
-    center：center align
-    stretch：cover whole area 
+cross：交叉轴对齐方式  align-items （单行的时候，wrap:nowrap生效）
+     start：从上到下
+     end：从下到上
+     center：居中
+     baseline：跟随内容高度对齐
+     stretch：高度铺满         （默认）
 ```
+
 ```
-box：child element setup 
-    mean：space is split by child elements equally
-    first：spare space is  not given to the first element and split by the rest of child elements equally
-    last：spare space is  not given to the last element and split by the rest of child elements equally
-    justify：spare space is  not given to both of the first element of each end 
-	and split by the rest of child elements equally
+row：交叉轴多行对齐方式  align-content（多行的时候，wrap:start/end，内容超过一行生效）
+     start：从上到下
+     end：从下到上
+     center：居中
+     baseline：跟随内容高度对齐
+     stretch：高度铺满        （默认）
+```
+
+
+```
+box：子元素设置
+    mean：子元素平分空间
+    first：除了第一个元素， 其他的平分空间
+    last：除了最后一个元素， 其他的平分空间
+    justify：除了第一个和最后一个元素， 其他的平分空间
 ```
 
 ### flex-box attributes description
 ```
-values range ( 0-10 ), how to asign spare space to individual child element: if the value equals 0,there won't 
+values range ( 0-10 ), how to asign spare space to individual child element: if the value equals 0,there won't
 be any spare space for this child element.
-spare space assignment = current value of flex-box / the sum of all values of child element's flex-box 
+spare space assignment = current value of flex-box / the sum of all values of child element's flex-box
 ```
 
-### demo
- [![demo](https://github.com/lzxb/flex.css/raw/master/shot/QR-code.png)](http://lzxb.github.io/flex.css/)
