@@ -3,18 +3,18 @@
 项目来源 [https://github.com/lzxb/flex.css](https://github.com/lzxb/flex.css) 有兴趣可以移步去看一下。
 本项目主要喜欢上面项目布局的方式，但是又不习惯他定义的名称，所以改写了一下。
 
-### download
+### 下载
 ```
 git clone https://github.com/kisstheair/Autumn-flex.git
 ```
 
-### npm
+### 安装
 ```
-npm install flex.css --save
+npm install Autumn-flex --save
 ```
 
 
-### 为什么使用 Autumn-flex.css?
+### 为什么使用 Autumn-flex?
 ```
 简洁的api，熟悉的属性值，入门毫无压力。
 在html中采用属性的方式布，将布局和css进行分离，清晰的布局结构让你更容易维护，可以在不更改css的情况下更改布局。
@@ -48,9 +48,9 @@ flex.css should be matched by flex attribute
 data-flex.css should be matched by data-flex attribute(used by React)
 If you use webpack to package, after npm is installed, and ES6 compiler is deployed in your project,
 flex attribute matching can be implemented in this way:
-import 'flex.css';
+import 'Autumn-flex/dist/flex.css';
 data-flex attribute matching can be implemented in this way( used by React):
-import 'flex.css/dist/data-flex.css';
+import 'Autumn-flex/dist/data-flex.css';
  -->
 <!-- flex attribute matching，a simple example of centering child element ： -->
   <div flex="main:center cross:center" style="width:500px; height: 500px; background: #108423">
@@ -62,7 +62,7 @@ import 'flex.css/dist/data-flex.css';
     <div style="background: #fff"> to see if this is in the center </div>
   </div>
 ```
-### collection of flex attributes
+### 属性介绍
 ```
 dir: 方向 flex-direction
     left：从左到右( default )

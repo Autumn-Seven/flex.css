@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lzxb/flex.css.git"
+    "url": "git+https://github.com/kisstheair/Autumn-flex.git"
   },
-  "author": "狼族小狈",
+  "author": "seven",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lzxb/flex.css/issues"
+    "url": "https://github.com/kisstheair/Autumn-flex/issues"
   },
-  "homepage": "https://github.com/lzxb/flex.css#readme",
+  "homepage": "https://github.com/kisstheair/Autumn-flex#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
