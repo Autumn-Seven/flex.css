@@ -11,6 +11,7 @@ git clone https://github.com/Autumn-Seven/flex.css.git
 ### 安装
 ```
 npm install Autumn-Seven/flex.css --save
+@import "flex.css";
 ```
 
 
