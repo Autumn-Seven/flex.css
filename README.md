@@ -1,4 +1,4 @@
-# Autumn-flex
+# flex.css
 
 项目来源 [https://github.com/lzxb/flex.css](https://github.com/lzxb/flex.css) 有兴趣可以移步去看一下。
 本项目主要喜欢上面项目布局的方式，但是又不习惯他定义的名称，所以改写了一下。
